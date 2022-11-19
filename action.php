@@ -115,7 +115,6 @@ function out_arr_search(array $arr_index = null)
                     }
                 }
             }
-            $str .= "<td>" . (array_sum($country['population']) / count($country['population'])) . "</td></tr>";
             $arr_out[] = $str;
             $i++;
         }
