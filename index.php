@@ -26,16 +26,6 @@ $str_form = '
 </div>';
 echo $str_form;
 
-// $out = out_arr();
-
-// if (count($out) > 0) {
-//     foreach ($out as $row) {
-//         echo $row;
-//     }
-// } else {
-//     echo "No data...";
-// }
-
 $str_form_s = '
 <div class="container">
   <h3 class= "my-2">Sort by:</h3>
@@ -80,7 +70,7 @@ echo $str_form_search;
 if (isset($_POST['gosearch'])) {
     $data = test_input($_POST['search']);
     $out = out_search($data);
-
+    
 // вызов функции out_arr() из action.php для получения массива
     if (count($out) > 0) {
         foreach ($out as $row) { //вывод массива построчно

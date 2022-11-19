@@ -1,0 +1,6 @@
+td, th {
+    text-align: center;
+}
+.table-films{
+    overflow-y: scroll;
+}

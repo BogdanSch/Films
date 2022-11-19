@@ -28,9 +28,9 @@ function out_arr()
     global $countries;
     // делаем переменную $countries глобальной
     $arr_out = [];
-    $arr_out[] = "<table  class=\"table table-hover text-white-50\">";
-    $arr_out[] = "<tr><td>№</td><td>Country</td><td>
-    Capital</td><td>Area</td><td>Population for 2000</td><td>Population for 2010</td><td>Average population</td></tr>";
+    $arr_out[] = "<table class=\"table-films table text-white-50\">";
+    $arr_out[] = "<tr><td>№</td><td>Film</td><td>Producer
+    </td><td>Genre</td><td>Date</td><td>Rate</td><td>Slogan</td><td>Studio</td><td colspan=\"3\">Sessions</td><td>Price</td><td>Places</td></tr>";
     foreach ($countries as $country) {
         static $i = 1;
         //статическая глобальная переменная-счетчик
@@ -47,7 +47,6 @@ function out_arr()
             }
 
         }
-        $str .= "<td>" . (array_sum($country['population']) / count($country['population'])) . "</td>";
         $str .= "</tr>";
         $arr_out[] = $str;
         $i++;
@@ -65,7 +64,6 @@ function name($a, $b)
     } else {
         return 1;
     }
-
 }
 
 function area($a, $b)
@@ -100,10 +98,10 @@ function sorting($p)
 function out_arr_search(array $arr_index = null)
 {
     global $countries; // делаем переменную $countries глобальной
-    $arr_out = array();
-    $arr_out[] = "<table  class=\"table table-hover text-white-50\">";
-    $arr_out[] = "<tr><td>№</td><td>Country</td><td>
-    Capital</td><td>Area</td><td>Population for 2000</td><td>Population for 2010</td><td>Average population</td></tr>";
+    $arr_out = [];
+    $arr_out[] = "<table  class=\"table text-white-50\">";
+    $arr_out[] = "<tr><td>№</td><td>Film</td><td>Producer
+    </td><td>Genre</td><td>Date</td><td>Rate</td><td>Slogan</td><td>Studio</td><td colspan=\"3\">Sessions</td><td>Price</td><td>Places</td></tr>";
     foreach ($countries as $index => $country) {
         if ($arr_index != null && in_array($index, $arr_index)) {
             static $i = 1;

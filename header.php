@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Countries</title>
+    <title>Film+</title>
     <meta charset="UTF-8">
     <!-- Latest compiled and minified CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -37,8 +37,8 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <h1 class="mb-2">Countries</h1>
+                        <a href="index.php" class="logo">
+                            <h1 class="mb-2">Film+</h1>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Search End ***** -->
@@ -52,7 +52,7 @@
                         <!-- ***** Search End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="index.php" class="active">Home</a></li>
                             <li><a href="browse.html">Browse</a></li>
                             <li><a href="details.html">Details</a></li>
                             <li><a href="streams.html">Streams</a></li>
