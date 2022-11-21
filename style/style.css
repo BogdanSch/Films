@@ -13,7 +13,7 @@ td, th {
 .table-films{
     overflow-x: scroll;
 }
-h1{
+h1, h2{
     text-align: center;
 }
 .input-field{

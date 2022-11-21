@@ -17,7 +17,8 @@ echo '<div class="main-banner">
 </div>
 </div><hr>';
 echo '<!-- Gallery -->
-<div class="row">
+<h2>Top films</h2>
+<div class="row" id="films">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
     <img
       src="https://images.moviesanywhere.com/8009215fb4980144700824b5817872e3/28219b33-2ed2-47a1-82ba-7fc700a1a77d.jpg"
