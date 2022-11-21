@@ -2,46 +2,85 @@
 include "header.php";
 include "action.php";
 
-echo "<h1>All the films right on Film+</h1><hr>";
-
-if (isset($_POST["go"])) {
-    $login = $_POST["login"];
-    $password = $_POST["pass"];
-    if (check_autorize($login, $password)) {
-        echo "Hello, $login!";
-        if (check_admin($login, $password)) {
-            echo "<a href='hello.php?login=$login'>Viewing a Report</a>";
-        }
-    } else {
-        echo "You are not registred!";
-    }
-}
-$str_form = '
-<div class="container">
-  <h3 class= "my-2">Sign in:</h3>
-  <form class="form-inline" action="index.php" method="post" onsubmit="return verify(this)">
-    <label for="login" class="m-2">Login:</label>
-    <input type="text" name="login" class="form-control my-2" id="login" placeholder="Enter login">
-    <label for="pass" class="m-2">Password:</label>
-    <input type="password" name="pass" id="pass" class="form-control my-2" placeholder="Enter password" >
-    <input type="submit" value="OK" name="go" class="btn btn-secondary m-2">
-  </form>
-  <span id="massage"></span>
+echo "<h1>Welcome on Film+</h1><hr>";
+echo '<div class="main-banner">
+<div class="row">
+  <div class="col-lg-7">
+    <div class="header-text">
+      <h6>Welcome To Film+</h6>
+      <h4><em>Browse</em> Our Popular Films Right Here</h4>
+      <div class="main-button">
+        <a href="#sessions">Browse Now</a>
+      </div>
+    </div>
+  </div>
+</div>
 </div><hr>';
-echo $str_form;
+echo '<!-- Gallery -->
+<div class="row">
+  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+    <img
+      src="https://images.moviesanywhere.com/8009215fb4980144700824b5817872e3/28219b33-2ed2-47a1-82ba-7fc700a1a77d.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="SW Last Jedi"
+    />
 
-$str_form_s = '
-<div class="container">
+    <img
+      src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="SW Revenge of The Sith"
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Mountains in the Clouds"
+    />
+
+    <img
+      src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Boat on Calm Water"
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Waves at Sea"
+    />
+
+    <img
+      src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Yosemite National Park"
+    />
+  </div>
+</div>
+<!-- Gallery -->';
+
+$str_form_s = '<hr>
+<div class="container" id="sessions">
   <h3 class= "my-2">Sort by:</h3>
   <form action="index.php" method="post" name="sort_form">
   <select name="sort" id="sort" size="1">
     <option value="name">name</option>
-    <option value="area">area</option>
-    <option value="population">average population</option>
+    <option value="price">price</option>
+    <option value="date">date</option>
+    <option value="slogan">slogan</option>
+    <option value="rating">rating</option>
+    <option value="producer">producer</option>
+    <option value="studio">studio</option>
+    <option value="sessions">sessions</option>
+    <option value="places">date</option>
+    <option value="discount">discount</option>
   </select>
   <input type="submit" name="submit" value="OK" class="btn btn-secondary my-2" >
   </form>
-</div>';
+</div> <hr>';
 echo $str_form_s;
 
 if (isset($_POST['sort'])) {
@@ -58,17 +97,5 @@ if (count($out) > 0) {
 } else {
     echo "No data...";
 }
-
-// $str_form_search = "
-// <div class=\"container\">
-//   <h3>Search:</h3>
-// 	<form  name='searchForm' action='index.php' method='post' onSubmit='return overify_login(this);' >
-//  		<input type='text' name='search' class='form-control' >
-//  		<input type='submit' name='gosearch' value='Confirm'  class='btn btn-secondary my-2'>
-//  		<input type='reset' name='clear' value='Reset'  class='btn btn-secondary my-2'>
-//  	</form>
-// </div>";
-
-// echo $str_form_search;
 
 include "footer.php";

@@ -5,7 +5,7 @@ $countries = [
         "producer" => "George Lucas",
         "genre" => "space opera",
         "year" => "2005",
-        "rate" => "8/10",
+        "rating" => "8/10",
         "slogan" => "You were the chosen one!",
         "studio" => "Lucasfilm",
         "showTime" => [
@@ -18,70 +18,87 @@ $countries = [
         "discount" => false
     ],
     [
-        "name" => "Star Wars Revenge of the Sith",
-        "producer" => "George Lucas",
-        "genre" => "space opera",
-        "year" => "2005",
-        "rate" => "8/10",
-        "slogan" => "You were the chosen one!",
-        "studio" => "Lucasfilm",
+        "name" => "Avengers: Infinity War",
+        "producer" => "Anthony Russo",
+        "genre" => "superhero film",
+        "year" => "2018",
+        "rating" => "9/10",
+        "slogan" => "Where will you be, when it all ends?",
+        "studio" => "Marvel",
         "showTime" => [
-            "23.12.2022(10:00), (синя зала)",
-            "15.12.2022(10:00), (червона зала)",
-            "10.01.2022(10:00), (жовта зала)"
+            "23.12.2022(12:00), (синя зала)",
+            "15.12.2022(12:00), (червона зала)",
+            "10.01.2022(12:00), (жовта зала)"
         ],
-        "price" => 150,
+        "price" => 145,
         "places" => 30,
         "discount" => false
     ],
     [
-        "name" => "Star Wars Revenge of the Sith",
-        "producer" => "George Lucas",
-        "genre" => "space opera",
-        "year" => "2005",
-        "rate" => "8/10",
-        "slogan" => "You were the chosen one!",
-        "studio" => "Lucasfilm",
+        "name" => "Avengers: Endgame",
+        "producer" => "Anthony Russo",
+        "genre" => "superhero film",
+        "year" => "2019",
+        "rating" => "7/10",
+        "slogan" => "Avenge the fallen",
+        "studio" => "Marvel",
         "showTime" => [
-            "23.12.2022(10:00), (синя зала)",
-            "15.12.2022(10:00), (червона зала)",
-            "10.01.2022(10:00), (жовта зала)"
+            "23.12.2022(12:00), (синя зала)",
+            "15.12.2022(12:00), (червона зала)",
+            "10.01.2022(12:00), (жовта зала)"
         ],
-        "price" => 150,
+        "price" => 145,
         "places" => 30,
         "discount" => false
     ],
     [
-        "name" => "Star Wars Revenge of the Sith",
-        "producer" => "George Lucas",
-        "genre" => "space opera",
-        "year" => "2005",
-        "rate" => "8/10",
-        "slogan" => "You were the chosen one!",
-        "studio" => "Lucasfilm",
+        "name" => "Avatar",
+        "producer" => "James Cameron",
+        "genre" => "science fiction",
+        "year" => "2009",
+        "rating" => "10/10",
+        "slogan" => "You don't choose your Avatar! your Avatar chooses you.",
+        "studio" => "20th Century Studios",
         "showTime" => [
-            "23.12.2022(10:00), (синя зала)",
-            "15.12.2022(10:00), (червона зала)",
-            "10.01.2022(10:00), (жовта зала)"
+            "23.12.2022(15:00), (жовта зала)",
+            "15.12.2022(15:00), (червона зала)",
+            "10.01.2022(15:00), (синя зала)"
         ],
-        "price" => 150,
+        "price" => 170,
         "places" => 30,
         "discount" => false
     ],
     [
-        "name" => "Star Wars Revenge of the Sith",
-        "producer" => "George Lucas",
+        "name" => "Star Wars: The Last Jedi",
+        "producer" => "Rian Johnson",
         "genre" => "space opera",
-        "year" => "2005",
-        "rate" => "8/10",
-        "slogan" => "You were the chosen one!",
+        "year" => "2017",
+        "rating" => "7.5/10",
+        "slogan" => "I Am One With the Force; the Force is With Me",
         "studio" => "Lucasfilm",
         "showTime" => [
-            "23.12.2022(10:00), (синя зала)",
-            "15.12.2022(10:00), (червона зала)",
-            "10.01.2022(10:00), (жовта зала)"
+            "24.12.2022(11:00), (синя зала)",
+            "16.12.2022(11:00), (жовта зала)",
+            "11.01.2022(11:00), (червона зала)"
         ],
-        "price" => 150,
+        "price" => 200,
+        "places" => 30,
+        "discount" => false
+    ],
+    [
+        "name" => "Star Wars: Episode IX - The Rise of Skywalker",
+        "producer" => "J.J. Abrams",
+        "genre" => "space opera",
+        "year" => "2019",
+        "rating" => "7/10",
+        "slogan" => "I Am One With the Force; the Force is With Me",
+        "studio" => "Lucasfilm",
+        "showTime" => [
+            "23.12.2022(13:30), (синя зала)",
+            "15.12.2022(13:30), (жовта зала)",
+            "08.01.2022(13:30), (червона зала)"
+        ],
+        "price" => 200,
         "places" => 30,
         "discount" => false
     ],
@@ -90,5 +107,5 @@ $countries = [
 $users = [
     "user" => "user",
     "admin" => "admin",
-    "pit" => "w123"
+    "pit" => "w123",
 ];

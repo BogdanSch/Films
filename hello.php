@@ -7,7 +7,7 @@ if (isset($_GET['login']) && $_GET['login'] != "") {
     $admin = $_GET['login'];
     if (check_log("admin") == true) {
         echo "<p>Hello, $admin</p>";
-        echo "<p>Weather</p>";
+        echo "<p>Something secret happens here!</p>";
     }
 } else {
     header("Location: index.php");

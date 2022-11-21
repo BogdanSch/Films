@@ -28,7 +28,7 @@ function out_arr()
     global $countries;
     // делаем переменную $countries глобальной
     $arr_out = [];
-    $arr_out[] = "<table class=\"table-films table text-white-50\">";
+    $arr_out[] = "<div class=\"table-films\"> <table class=\"table text-white-50\">";
     $arr_out[] = "<tr><td>№</td><td>Film</td><td>Producer
     </td><td>Genre</td><td>Date</td><td>Rate</td><td>Slogan</td><td>Studio</td><td colspan=\"3\">Sessions</td><td>Price</td><td>Places</td></tr>";
     foreach ($countries as $country) {
@@ -51,31 +51,18 @@ function out_arr()
         $arr_out[] = $str;
         $i++;
     }
-    $arr_out[] = "</table>";
+    $arr_out[] = "</table></div>";
     return $arr_out;
 }
 
 function name($a, $b)
-{ // функция, определяющая способ сортировки (по названию столицы)
-    if ($a["capital"] < $b["capital"]) {
-        return -1;
-    } elseif ($a["capital"] == $b["capital"]) {
-        return 0;
-    } else {
-        return 1;
-    }
+{
+    return $a["name"] <=> $b["name"];
 }
 
-function area($a, $b)
-{ // функция, определяющая способ сортировки (по названию столицы)
-    if ($a["area"] < $b["area"]) {
-        return -1;
-    } elseif ($a["area"] == $b["area"]) {
-        return 0;
-    } else {
-        return 1;
-    }
-
+function price($a, $b)
+{
+    return $a["price"] <=> $b["price"];
 }
 function population($a, $b)
 { // функция, определяющая способ сортировки (по населению)
@@ -99,7 +86,7 @@ function out_arr_search(array $arr_index = null)
 {
     global $countries; // делаем переменную $countries глобальной
     $arr_out = [];
-    $arr_out[] = "<table  class=\"table text-white-50\">";
+    $arr_out[] = "<div class=\"table-films\"><table class=\"table-films table text-white-50\">";
     $arr_out[] = "<tr><td>№</td><td>Film</td><td>Producer
     </td><td>Genre</td><td>Date</td><td>Rate</td><td>Slogan</td><td>Studio</td><td colspan=\"3\">Sessions</td><td>Price</td><td>Places</td></tr>";
     foreach ($countries as $index => $country) {
@@ -119,7 +106,7 @@ function out_arr_search(array $arr_index = null)
             $i++;
         }
     }
-    $arr_out[] = "</table>";
+    $arr_out[] = "</table></div>";
     return $arr_out;
 }
 

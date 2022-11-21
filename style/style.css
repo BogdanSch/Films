@@ -1,0 +1,34 @@
+/* General - Start */
+html{
+	scroll-behavior: smooth;
+}
+body{
+    color: #fff;
+}
+/* General - End */
+
+td, th {
+    text-align: center;
+}
+.table-films{
+    overflow-x: scroll;
+}
+h1{
+    text-align: center;
+}
+.input-field{
+    border: none;
+    border-radius: 23px;
+    color: #666;
+    font-size: 14px;
+    padding: 20px 45px;
+}
+select{
+    padding: 10px;
+    background:#edf2ff;
+    border:none;
+    border-radius: 20px;
+}
+button:hover{
+    cursor: pointer;
+}

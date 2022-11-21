@@ -15,6 +15,7 @@
         </div>
     </div>
 </footer>
+<script src="js/links.js"></script>
 </body>
 
 </html>
