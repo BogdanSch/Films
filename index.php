@@ -16,8 +16,7 @@ echo '<div class="main-banner">
   </div>
 </div>
 </div><hr>';
-echo '<!-- Gallery -->
-<h2>Top films</h2>
+echo '<h2>Top films</h2><hr>
 <div class="row" id="films">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
     <img
@@ -32,7 +31,6 @@ echo '<!-- Gallery -->
       alt="SW Revenge of The Sith"
     />
   </div>
-
   <div class="col-lg-4 mb-4 mb-lg-0">
     <img
       src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg"
@@ -46,7 +44,6 @@ echo '<!-- Gallery -->
       alt="Boat on Calm Water"
     />
   </div>
-
   <div class="col-lg-4 mb-4 mb-lg-0">
     <img
       src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg"
@@ -60,8 +57,7 @@ echo '<!-- Gallery -->
       alt="Yosemite National Park"
     />
   </div>
-</div>
-<!-- Gallery -->';
+</div>';
 
 $str_form_s = '<hr>
 <div class="container" id="sessions">

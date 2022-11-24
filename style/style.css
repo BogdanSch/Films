@@ -2,9 +2,6 @@
 html{
 	scroll-behavior: smooth;
 }
-body{
-    color: #fff;
-}
 /* General - End */
 
 td, th {
@@ -15,6 +12,9 @@ td, th {
 }
 h1, h2{
     text-align: center;
+}
+h2{
+    margin-bottom: 10px;
 }
 .input-field{
     border: none;
