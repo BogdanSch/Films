@@ -2,7 +2,7 @@
 include "header.php";
 include "action.php";
 
-echo "<h1>Welcome on Film+</h1><hr>";
+// echo "<h1>Welcome on Film+</h1><hr>";
 echo '<div class="main-banner">
 <div class="row">
   <div class="col-lg-7">
@@ -66,13 +66,13 @@ $str_form_s = '<hr>
   <select name="sort" id="sort" size="1">
     <option value="name">name</option>
     <option value="price">price</option>
-    <option value="date">date</option>
+    <option value="year">year</option>
     <option value="slogan">slogan</option>
     <option value="rating">rating</option>
     <option value="producer">producer</option>
     <option value="studio">studio</option>
     <option value="sessions">sessions</option>
-    <option value="places">date</option>
+    <option value="places">places</option>
     <option value="discount">discount</option>
   </select>
   <input type="submit" name="submit" value="OK" class="btn btn-secondary my-2" >

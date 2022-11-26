@@ -8,27 +8,43 @@ td, th {
     text-align: center;
 }
 .table-films{
+    width: 100%;
     overflow-x: scroll;
 }
-h1, h2{
+h1, h2, h3, p{
     text-align: center;
 }
 h2{
     margin-bottom: 10px;
 }
-.input-field{
+h3, h6{
+    color: rgb(197, 197, 197);
+}
+p{
+    color: #fff;
+}
+.input-field, .input-field-login{
     border: none;
     border-radius: 23px;
     color: #666;
     font-size: 14px;
-    padding: 20px 45px;
+    padding: 10px 15px;
+    margin: 8px 0;
+}
+.input-field-login{
+    padding: 20px 35px;
 }
 select{
     padding: 10px;
     background:#edf2ff;
     border:none;
-    border-radius: 20px;
+    border-radius: 7px;
 }
 button:hover{
     cursor: pointer;
+}
+.form-profile{
+    display: block;
+    margin: 0 auto;
+    max-width: 45%;
 }

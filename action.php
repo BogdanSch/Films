@@ -23,27 +23,35 @@ function check_log($log)
     return $log == "admin";
 }
 
+function print_table_start(){
+    return "<tr><td>№</td><td>Film</td><td>Producer
+    </td><td>Genre</td><td>Date</td><td>Rate</td><td class=\"slogan\">Slogan</td><td>Studio</td><td colspan=\"3\">Sessions</td><td>Price UAH</td><td>Places</td><td>Discounts</td></tr>";
+}
+
 function out_arr()
 {
-    global $countries;
-    // делаем переменную $countries глобальной
+    global $films;
     $arr_out = [];
     $arr_out[] = "<div class=\"table-films\"> <table class=\"table text-white-50\">";
-    $arr_out[] = "<tr><td>№</td><td>Film</td><td>Producer
-    </td><td>Genre</td><td>Date</td><td>Rate</td><td>Slogan</td><td>Studio</td><td colspan=\"3\">Sessions</td><td>Price</td><td>Places</td></tr>";
-    foreach ($countries as $country) {
+    $arr_out[] = print_table_start();
+    foreach ($films as $country) {
         static $i = 1;
         //статическая глобальная переменная-счетчик
         $str = "<tr>";
         $str .= "<td>" . $i . "</td>";
         foreach ($country as $key => $value) {
             if (!is_array($value)) {
-                $str .= "<td>$value</td>";
-            } else {
+                if($key === "name"){
+                    $str .= "<td><a href=\"./order.php?film=$value\">$value</a></td>";
+                }
+                else{
+                    $str .= "<td>$value</td>";
+                }
+            }
+            else {
                 foreach ($value as $k => $v) {
                     $str .= "<td>$v</td>";
                 }
-
             }
 
         }
@@ -55,48 +63,65 @@ function out_arr()
     return $arr_out;
 }
 
+//Sort functions
 function name($a, $b)
 {
     return $a["name"] <=> $b["name"];
 }
-
 function price($a, $b)
 {
     return $a["price"] <=> $b["price"];
 }
-function population($a, $b)
-{ // функция, определяющая способ сортировки (по населению)
-    if ($a["population"]["2000"] + $a["population"]["2010"] < $b["population"]["2000"] + $b["population"]["2010"]) {
-        return -1;
-    } elseif ($a["population"]["2000"] + $a["population"]["2010"] == $b["population"]["2000"] + $b["population"]["2010"]) {
-        return 0;
-    } else {
-        return 1;
-    }
-
+function year($a, $b)
+{
+    return $a["year"] <=> $b["year"];
 }
-
+function slogan($a, $b){
+    return $a["slogan"] <=> $b["slogan"];
+}
+function rating($a, $b){
+    return $a["rating"] <=> $b["rating"];
+}
+function producer($a, $b){
+    return $a["producer"] <=> $b["producer"];
+}
+function studio($a, $b)
+{
+    return $a["studio"] <=> $b["studio"];
+}
+function sessions($a, $b){
+    return $a["showTime"] <=> $b["showTime"];
+}
+function places($a, $b){
+    return $a["places"] <=> $b["places"];
+}
+function discount($a, $b){
+    return $a["discount"] <=> $b["discount"];
+}
 function sorting($p)
 {
-    global $countries;
-    uasort($countries, $p);
+    global $films;
+    uasort($films, $p);
 }
-
+//sort end
 function out_arr_search(array $arr_index = null)
 {
-    global $countries; // делаем переменную $countries глобальной
+    global $films;
     $arr_out = [];
     $arr_out[] = "<div class=\"table-films\"><table class=\"table-films table text-white-50\">";
-    $arr_out[] = "<tr><td>№</td><td>Film</td><td>Producer
-    </td><td>Genre</td><td>Date</td><td>Rate</td><td>Slogan</td><td>Studio</td><td colspan=\"3\">Sessions</td><td>Price</td><td>Places</td></tr>";
-    foreach ($countries as $index => $country) {
+    $arr_out[] = print_table_start();
+    foreach ($films as $index => $country) {
         if ($arr_index != null && in_array($index, $arr_index)) {
             static $i = 1;
             $str = "<tr>" . "<td>" . $i . "</td>";
             foreach ($country as $key => $value) {
                 if (!is_array($value)) {
-                    $str .= "<td>$value</td>";
-                } else {
+                    if($key === "name")
+                        $str .= "<td><a href=\"./order.php?film=$value\">$value</a></td>";
+                    else
+                        $str .= "<td>$value</td>";
+                } 
+                else {
                     foreach ($value as $k => $v) {
                         $str .= "<td>$v</td>";
                     }
@@ -112,9 +137,9 @@ function out_arr_search(array $arr_index = null)
 
 function out_search($data)
 {
-    global $countries; // делаем переменную $countries глобальной
+    global $films;
     $arr_index = array();
-    foreach ($countries as $country_number => $country) {
+    foreach ($films as $country_number => $country) {
         foreach ($country as $key => $value) {
             if (!is_array($value)) {
                 if (stristr($value, $data)) {

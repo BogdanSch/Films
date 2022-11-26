@@ -1,5 +1,5 @@
 <?php
-$countries = [
+$films = [
     [
         "name" => "Star Wars Revenge of the Sith",
         "producer" => "George Lucas",
@@ -10,12 +10,12 @@ $countries = [
         "studio" => "Lucasfilm",
         "showTime" => [
             "23.12.2022(10:00), (синя зала)",
-            "15.12.2022(10:00), (червона зала)",
-            "10.01.2022(10:00), (жовта зала)"
+            "14.12.2022(10:00), (червона зала)",
+            "09.01.2022(10:00), (жовта зала)"
         ],
         "price" => 150,
-        "places" => 30,
-        "discount" => false
+        "places" => 25,
+        "discount" => 40
     ],
     [
         "name" => "Avengers: Infinity War",
@@ -32,7 +32,7 @@ $countries = [
         ],
         "price" => 145,
         "places" => 30,
-        "discount" => false
+        "discount" => 15
     ],
     [
         "name" => "Avengers: Endgame",
@@ -43,13 +43,13 @@ $countries = [
         "slogan" => "Avenge the fallen",
         "studio" => "Marvel",
         "showTime" => [
-            "23.12.2022(12:00), (синя зала)",
+            "26.12.2022(12:00), (синя зала)",
             "15.12.2022(12:00), (червона зала)",
             "10.01.2022(12:00), (жовта зала)"
         ],
         "price" => 145,
-        "places" => 30,
-        "discount" => false
+        "places" => 35,
+        "discount" => 35
     ],
     [
         "name" => "Avatar",
@@ -65,8 +65,8 @@ $countries = [
             "10.01.2022(15:00), (синя зала)"
         ],
         "price" => 170,
-        "places" => 30,
-        "discount" => false
+        "places" => 40,
+        "discount" => 30
     ],
     [
         "name" => "Star Wars: The Last Jedi",
@@ -82,8 +82,8 @@ $countries = [
             "11.01.2022(11:00), (червона зала)"
         ],
         "price" => 200,
-        "places" => 30,
-        "discount" => false
+        "places" => 20,
+        "discount" => 20
     ],
     [
         "name" => "Star Wars: Episode IX - The Rise of Skywalker",
@@ -100,7 +100,7 @@ $countries = [
         ],
         "price" => 200,
         "places" => 30,
-        "discount" => false
+        "discount" => 20
     ],
 ];
 
@@ -108,4 +108,14 @@ $users = [
     "user" => "user",
     "admin" => "admin",
     "pit" => "w123",
+];
+
+$stat_income = [
+    "freePlaces" => 20,
+    "soldTickets" => 90,
+    "soldTicketsPrice" => 4000,
+];
+
+$coupons = [
+    "value" => 12345
 ];
