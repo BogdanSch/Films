@@ -44,6 +44,9 @@ function out_arr()
                 if($key === "name"){
                     $str .= "<td><a href=\"./order.php?film=$value\">$value</a></td>";
                 }
+                if($key === "rating"){
+                    $str .= "<td>$value/10</td>";
+                }
                 else{
                     $str .= "<td>$value</td>";
                 }
@@ -118,6 +121,9 @@ function out_arr_search(array $arr_index = null)
                 if (!is_array($value)) {
                     if($key === "name")
                         $str .= "<td><a href=\"./order.php?film=$value\">$value</a></td>";
+                    if($key === "rating"){
+                        $str .= "<td>$value/10</td>";
+                    }
                     else
                         $str .= "<td>$value</td>";
                 } 
