@@ -59,10 +59,8 @@ echo '<h2>Top films</h2><hr>
   </div>
 </div>';
 
-$str_form_s = '<hr>
-<div class="container" id="sessions">
-  <h3 class= "my-2">Sort by:</h3>
-  <form action="index.php#sortby" method="post" name="sort_form" id="sortby">
+$str_form_up = '<hr><div class="container">';
+$str_form_s = '<form action="index.php#sortby" method="post" name="sort_form" id="sortby">
   <select name="sort" id="sort" size="1">
     <option value="name">name</option>
     <option value="price">price</option>
@@ -78,6 +76,13 @@ $str_form_s = '<hr>
   <input type="submit" name="submit" value="OK" class="btn btn-secondary my-2" >
   </form>
 </div> <hr>';
+echo $str_form_up;
+if (isset($_POST['sort'])) {
+  $how_to_sort = $_POST['sort'];
+  echo "<h3>Sort by: $how_to_sort</h3>";
+}else{
+  echo "<h3>Sort by: </h3>";
+}
 echo $str_form_s;
 
 if (isset($_POST['sort'])) {
