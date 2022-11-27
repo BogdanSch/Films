@@ -58,75 +58,11 @@ echo '<h2>Top films</h2><hr>
     />
   </div>
 </div>';
-// echo '<section class="section" id="projects">
-// <div class="container">
-
-//   <div class="row">
-//       <div class="col-lg-3">
-//           <div class="section-heading">
-//               <h6>Жанры</h6>
-//               <h6>(в прокате 6 фильмов)</h6>
-//           </div>
-//           <div class="filters">
-//               <ul>
-//                   <li class="active" data-filter="*">Все</li>
-//                   <li data-filter=".des">Боевик</li>
-//                   <li data-filter=".dev">Военный</li>
-//                   <li data-filter=".tsh">Вестерн</li>
-//               </ul>
-//           </div>
-//       </div>
-//       <div class="col-lg-9">
-//           <div class="filters-content">
-//               <div class="row grid" style="position: relative; height: 701.887px;"> 
-//                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all tsh" style="position: absolute; left: 0%; top: 0px;">
-//                     <div class="item">
-//                       <a href="https://images.moviesanywhere.com/8009215fb4980144700824b5817872e3/28219b33-2ed2-47a1-82ba-7fc700a1a77d.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="https://images.moviesanywhere.com/8009215fb4980144700824b5817872e3/28219b33-2ed2-47a1-82ba-7fc700a1a77d.jpg" alt=""></a> 
-//                     </div>
-//                   </div>
-                  
-//                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des" style="position: absolute; left: 33.1944%; top: 0px;">
-//                     <div class="item">
-//                       <a href="images/JohnWick2.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="images/JohnWick2.jpg" alt=""></a>
-//                     </div>
-//                   </div>
-//                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev" style="position: absolute; left: 66.5278%; top: 0px;">
-//                     <div class="item">
-//                       <a href="images/1917.jpg  " data-lightbox="image-1" data-title="Our Projects"><img src="images/1917.jpg  " alt=""></a>
-//                     </div>
-//                   </div>
-//                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all gra" style="position: absolute; left: 66.5278%; top: 345px;">
-                   
-//                   </div>
-//                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all tsh" style="position: absolute; left: 0%; top: 352px;">
-//                     <div class="item">
-//                       <a href="images/jango.jpg  " data-lightbox="image-1" data-title="Our Projects"><img src="images/jango.jpg" alt="jango"></a>
-//                     </div>
-//                   </div>
-//                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev" style="position: absolute; left: 33.1944%; top: 352px;">
-//                     <div class="item">
-//                       <a href="images/yarost.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="images/yarost.jpg" alt=""></a>
-//                     </div>
-//                   </div>
-                  
-//                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des" style="position: absolute; left: 66.5278%; top: 375px;">
-//                     <div class="item">
-//                       <a href="images/medmaks.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="images/medmaks.jpg" alt=""></a>
-                      
-//                     </div>
-//                   </div>
-            
-//               </div>
-//           </div>
-//       </div>
-//   </div>
-// </div>
-// </section>';
 
 $str_form_s = '<hr>
 <div class="container" id="sessions">
   <h3 class= "my-2">Sort by:</h3>
-  <form action="index.php" method="post" name="sort_form">
+  <form action="index.php#sortby" method="post" name="sort_form" id="sortby">
   <select name="sort" id="sort" size="1">
     <option value="name">name</option>
     <option value="price">price</option>
