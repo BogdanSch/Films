@@ -50,8 +50,8 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="link"><a href="index.php" class="active">Home</a></li>
-                            <li class="link"><a href="#films">Films</a></li>
-                            <li class="link"><a href="#sessions">Sessions</a></li>
+                            <li class="link"><a href="index.php#films">Films</a></li>
+                            <li class="link"><a href="index.php#sessions">Sessions</a></li>
                             <li class="link"><a href="profile.php">Profile <img src="assets/images/profile-header.jpg" alt="profile"></a></li>
                         </ul>
                         <a class='menu-trigger'>
