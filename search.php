@@ -9,13 +9,13 @@ if(isset($_GET['searchKeyword'])){
     $out = out_search($data);
         
     // вызов функции out_arr() из action.php для получения массива
-    if (count($out) > 0) {
+    if (count($out) > 3) {
         foreach ($out as $row) { //вывод массива построчно
             echo $row;
         }
     } else // если нет данных
     {
-        echo "Nothing found...";
+        echo "<h3>Sorry! Nothing found...</h3>";
     }
 }
 echo '</div>';

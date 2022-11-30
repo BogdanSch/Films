@@ -32,14 +32,14 @@ $(document).ready(function() {
                 let spaceOperaFilms = document.querySelectorAll(".fiction");
                 console.log(spaceOperaFilms);
                 spaceOperaFilms.forEach((element) => {
-                    element.style = "transform: translate(-150%, -100%);";
+                    element.style = "transform: translate(-100%, -50%);";
                 });
             }
             else if(elName == "Superhero film"){
                 let spaceOperaFilms = document.querySelectorAll(".superhero");
                 console.log(spaceOperaFilms);
                 spaceOperaFilms.forEach((element) => {
-                    element.style = "transform: translate(-300%, 0);";
+                    element.style = "transform: translate(-200%, 0);";
                 });
             }
         })

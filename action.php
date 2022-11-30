@@ -34,12 +34,12 @@ function out_arr()
     $arr_out = [];
     $arr_out[] = "<div class=\"table-films\" id=\"sessions\"> <table class=\"table text-white-50\">";
     $arr_out[] = print_table_start();
-    foreach ($films as $country) {
+    foreach ($films as $film) {
         static $i = 1;
         //статическая глобальная переменная-счетчик
         $str = "<tr>";
         $str .= "<td>" . $i . "</td>";
-        foreach ($country as $key => $value) {
+        foreach ($film as $key => $value) {
             if (!is_array($value)) {
                 if($key === "name"){
                     $str .= "<td><a href=\"./order.php?film=$value\">$value</a></td>";

@@ -99,7 +99,7 @@ if (isset($_POST['sort'])) {
 
 $out = out_arr();
 
-if (count($out) > 0) {
+if (count($out) > 3) {
     foreach ($out as $row) {
         echo $row;
     }
