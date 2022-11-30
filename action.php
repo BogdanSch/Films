@@ -32,7 +32,7 @@ function out_arr()
 {
     global $films;
     $arr_out = [];
-    $arr_out[] = "<div class=\"table-films\"> <table class=\"table text-white-50\">";
+    $arr_out[] = "<div class=\"table-films\" id=\"sessions\"> <table class=\"table text-white-50\">";
     $arr_out[] = print_table_start();
     foreach ($films as $country) {
         static $i = 1;
@@ -44,7 +44,7 @@ function out_arr()
                 if($key === "name"){
                     $str .= "<td><a href=\"./order.php?film=$value\">$value</a></td>";
                 }
-                if($key === "rating"){
+                elseif($key === "rating"){
                     $str .= "<td>$value/10</td>";
                 }
                 else{
@@ -121,7 +121,7 @@ function out_arr_search(array $arr_index = null)
                 if (!is_array($value)) {
                     if($key === "name")
                         $str .= "<td><a href=\"./order.php?film=$value\">$value</a></td>";
-                    if($key === "rating"){
+                    elseif($key === "rating"){
                         $str .= "<td>$value/10</td>";
                     }
                     else

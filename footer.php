@@ -16,6 +16,7 @@
     </div>
 </footer>
 <script src="js/links.js"></script>
+<script src="js/films.js"></script>
 </body>
 
 </html>
